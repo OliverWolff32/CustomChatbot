@@ -1,4 +1,4 @@
-package activity5;
+ 
 
 import java.util.Random;
 
@@ -43,6 +43,18 @@ public class Magpie5
         else if (findKeyword(statement, "no") >= 0)
         {
             response = "Why so negative?";
+        }
+        else if (findKeyword(statement, "your name") >= 0)
+        {
+            response = "My name is John Lennon";
+        }
+        else if (findKeyword(statement, "you famous for") >= 0)
+        {
+            response = "I was a musician and member of the Beatles";
+        }
+        else if (findKeyword(statement, "you married") >= 0)
+        {
+            response = "I was married to Cynthia Lennon then Yoko Ono";
         }
         else if (findKeyword(statement, "mother") >= 0
                 || findKeyword(statement, "father") >= 0
