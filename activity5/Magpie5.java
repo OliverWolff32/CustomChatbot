@@ -56,6 +56,26 @@ public class Magpie5
         {
             response = "I was married to Cynthia Lennon then Yoko Ono";
         }
+        else if (findKeyword(statement, "have any children") >= 0)
+        {
+            response = "I had 2 children";
+        }
+        else if (findKeyword(statement, "have children") >= 0)
+        {
+            response = "I had 2 children";
+        }
+        else if (findKeyword(statement, "you born") >= 0)
+        {
+            response = "I was born October 9, 1940 in Liverpool";
+        }
+        else if (findKeyword(statement, "you live") >= 0)
+        {
+            response = "I lived in New York City";
+        }
+        else if (findKeyword(statement, "you die") >= 0)
+        {
+            response = "I was killed in 1980 in New York City";
+        }
         else if (findKeyword(statement, "mother") >= 0
                 || findKeyword(statement, "father") >= 0
                 || findKeyword(statement, "sister") >= 0
@@ -73,6 +93,12 @@ public class Magpie5
         else if (findKeyword(statement, "I want", 0) >= 0)
         {
             response = transformIWantStatement(statement);
+        }
+        else if (findKeyword(statement, "children's names") >= 0
+                    || findKeyword(statement, "family's names") >= 0
+                    || findKeyword(statement, "kids names") >= 0)
+        {
+            response = "My sons are named Julian and Sean.";
         }
 
         else
